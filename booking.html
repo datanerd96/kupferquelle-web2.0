@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buchen Sie Ihren Aufenthalt im Kupferquelle Hotel direkt und ohne Umwege. Genießen Sie die besten Preise und flexible Optionen.">
+    <meta name="keywords" content="Kupferquelle Buchung, Hotel Reservierung, Namibia Unterkunft, Direktbuchung">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Direkte Buchung - Kupferquelle Hotel">
+    <meta property="og:description" content="Buchen Sie Ihren Aufenthalt im Kupferquelle Hotel direkt und ohne Umwege. Genießen Sie die besten Preise und flexible Optionen.">
+    <meta property="og:image" content="images/hotel-exterior.jpg">
+    <meta property="og:url" content="https://www.kupferquelle.com/booking.html">
+    <meta property="og:type" content="website">
+    <title>Direkte Buchung - Kupferquelle Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="https://www.kupferquelle.com/booking.html">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Kupferquelle Hotel Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Zimmer & Suiten</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="activities.html">Aktivitäten</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li class="booking-btn"><a href="booking.html">Jetzt Buchen</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="language-selector">
+                    <option value="de" selected>Deutsch</option>
+                    <option value="en">English</option>
+                    <option value="af">Afrikaans</option>
+                </select>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Direkte Buchung</h1>
+            <p>Buchen Sie direkt bei uns und genießen Sie die besten Preise und Vorteile</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-advantages">
+                <h2>Vorteile der Direktbuchung</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <img src="images/best-price-icon.svg" alt="Bester Preis Icon">
+                        <h3>Beste Preisgarantie</h3>
+                        <p>Bei uns erhalten Sie immer den günstigsten Preis ohne versteckte Gebühren.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <img src="images/flexible-icon.svg" alt="Flexibilität Icon">
+                        <h3>Flexible Stornierung</h3>
+                        <p>Kostenlose Stornierung bis zu 48 Stunden vor Anreise.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <img src="images/special-icon.svg" alt="Spezialangebote Icon">
+                        <h3>Exklusive Angebote</h3>
+                        <p>Zugang zu speziellen Angeboten, die nur bei Direktbuchung verfügbar sind.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-form-container">
+                <h2>Ihre Buchung</h2>
+                <form id="booking-form" action="process-booking.php" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="check-in">Anreise</label>
+                            <input type="date" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Abreise</label>
+                            <input type="date" id="check-out" name="check-out" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Gäste</label>
+                            <select id="guests" name="guests" required>
+                                <option value="1">1 Person</option>
+                                <option value="2" selected>2 Personen</option>
+                                <option value="3">3 Personen</option>
+                                <option value="4">4 Personen</option>
+                                <option value="5">5+ Personen</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-type">Zimmertyp</label>
+                            <select id="room-type" name="room-type" required>
+                                <option value="standard">Standard Zimmer</option>
+                                <option value="deluxe">Deluxe Zimmer</option>
+                                <option value="suite">Suite</option>
+                                <option value="family">Familienzimmer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="special-requests">Besondere Wünsche</label>
+                            <textarea id="special-requests" name="special-requests" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn">Jetzt Buchen</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="room-preview">
+        <div class="container">
+            <h2>Unsere Zimmer</h2>
+            <div class="room-cards">
+                <div class="room-card">
+                    <img src="images/standard-room.jpg" alt="Standard Zimmer">
+                    <div class="room-info">
+                        <h3>Standard Zimmer</h3>
+                        <p>Komfortables Zimmer mit allen grundlegenden Annehmlichkeiten für einen angenehmen Aufenthalt.</p>
+                        <p class="price">Ab N$ 1.200 pro Nacht</p>
+                        <a href="rooms.html#standard" class="btn-secondary">Details</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="images/deluxe-room.jpg" alt="Deluxe Zimmer">
+                    <div class="room-info">
+                        <h3>Deluxe Zimmer</h3>
+                        <p>Geräumiges Zimmer mit zusätzlichem Komfort und schönem Ausblick.</p>
+                        <p class="price">Ab N$ 1.800 pro Nacht</p>
+                        <a href="rooms.html#deluxe" class="btn-secondary">Details</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="images/suite.jpg" alt="Suite">
+                    <div class="room-info">
+                        <h3>Suite</h3>
+                        <p>Luxuriöse Suite mit separatem Wohnbereich und erstklassigen Annehmlichkeiten.</p>
+                        <p class="price">Ab N$ 2.500 pro Nacht</p>
+                        <a href="rooms.html#suite" class="btn-secondary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Kupferquelle Hotel</h3>
+                    <p>Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
+                    <p>Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Zimmer & Suiten</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="activities.html">Aktivitäten</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Abonnieren Sie unseren Newsletter für exklusive Angebote und Updates.</p>
+                    <form id="newsletter-form" action="subscribe.php" method="post">
+                        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                        <button type="submit" class="btn-secondary">Abonnieren</button>
+                    </form>
+                </div>
+                <div class="footer-col">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/kupferquelle" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://instagram.com/kupferquelle" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://tripadvisor.com/kupferquelle" target="_blank" rel="noopener"><img src="images/tripadvisor-icon.svg" alt="TripAdvisor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kupferquelle Hotel. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Datenschutz</a>
+                    <a href="terms.html">AGB</a>
+                    <a href="imprint.html">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

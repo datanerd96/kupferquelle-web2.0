@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kupferquelle Hotel - Luxuriöses Hotel in Namibia mit erstklassigem Service, komfortablen Zimmern und hauseigenem Restaurant. Buchen Sie Ihren Aufenthalt direkt bei uns.">
+    <meta name="keywords" content="Kupferquelle, Hotel Namibia, Tsumeb Hotel, Direktbuchung, Luxushotel Namibia">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kupferquelle Hotel - Ihr Luxushotel in Namibia">
+    <meta property="og:description" content="Erleben Sie erstklassigen Service und Komfort im Kupferquelle Hotel. Buchen Sie direkt und sichern Sie sich die besten Preise.">
+    <meta property="og:image" content="images/hotel-exterior.jpg">
+    <meta property="og:url" content="https://www.kupferquelle.com">
+    <meta property="og:type" content="website">
+    <title>Kupferquelle Hotel - Ihr Luxushotel in Namibia | Direkte Buchung</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="https://www.kupferquelle.com">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Kupferquelle Hotel",
+      "image": "images/hotel-exterior.jpg",
+      "url": "https://www.kupferquelle.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bahnhof Street",
+        "addressLocality": "Tsumeb",
+        "addressRegion": "Oshikoto",
+        "postalCode": "9000",
+        "addressCountry": "Namibia"
+      },
+      "telephone": "+264 67 221 068",
+      "priceRange": "$$$",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Swimming Pool"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Restaurant"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free WiFi"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Kupferquelle Hotel Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Zimmer & Suiten</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="activities.html">Aktivitäten</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li class="booking-btn"><a href="booking.html">Jetzt Buchen</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide">
+                <img src="images/hero-1.jpg" alt="Kupferquelle Hotel Außenansicht">
+                <div class="slide-content">
+                    <h1>Willkommen im Kupferquelle Hotel</h1>
+                    <p>Ihr Luxushotel im Herzen von Namibia</p>
+                    <a href="booking.html" class="btn">Direkt Buchen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-widget">
+        <div class="container">
+            <form id="booking-form" action="process-booking.php" method="post">
+                <div class="form-group">
+                    <label for="check-in">Anreise</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Abreise</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Gäste</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 Person</option>
+                        <option value="2" selected>2 Personen</option>
+                        <option value="3">3 Personen</option>
+                        <option value="4">4 Personen</option>
+                        <option value="5">5+ Personen</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Zimmertyp</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="standard">Standard Zimmer</option>
+                        <option value="deluxe">Deluxe Zimmer</option>
+                        <option value="suite">Suite</option>
+                        <option value="family">Familienzimmer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Verfügbarkeit Prüfen</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="about-preview">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Über das Kupferquelle Hotel</h2>
+                    <p>Das Kupferquelle Hotel ist eine Oase der Ruhe und des Luxus im Herzen von Namibia. Unser Hotel bietet erstklassigen Service, komfortable Zimmer und ein hauseigenes Restaurant mit lokalen und internationalen Spezialitäten.</p>
+                    <p>Seit über 50 Jahren empfangen wir Gäste aus aller Welt und bieten ihnen ein unvergessliches Erlebnis in der atemberaubenden Landschaft Namibias.</p>
+                    <a href="about.html" class="btn-secondary">Mehr erfahren</a>
+                </div>
+                <div class="col">
+                    <img src="images/hotel-garden.jpg" alt="Kupferquelle Hotel Garten">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms-preview">
+        <div class="container">
+            <h2>Unsere Zimmer & Suiten</h2>
+            <div class="room-cards">
+                <div class="room-card">
+                    <img src="images/standard-room.jpg" alt="Standard Zimmer">
+                    <h3>Standard Zimmer</h3>
+                    <p>Komfortable Zimmer mit allem notwendigen Komfort für einen angenehmen Aufenthalt.</p>
+                    <div class="room-features">
+                        <span>25m²</span>
+                        <span>2 Personen</span>
+                        <span>Klimaanlage</span>
+                    </div>
+                    <a href="rooms.html#standard" class="btn-secondary">Details</a>
+                </div>
+                <div class="room-card">
+                    <img src="images/deluxe-room.jpg" alt="Deluxe Zimmer">
+                    <h3>Deluxe Zimmer</h3>
+                    <p>Geräumige Zimmer mit zusätzlichem Komfort und Annehmlichkeiten für einen luxuriösen Aufenthalt.</p>
+                    <div class="room-features">
+                        <span>35m²</span>
+                        <span>2-3 Personen</span>
+                        <span>Balkon</span>
+                    </div>
+                    <a href="rooms.html#deluxe" class="btn-secondary">Details</a>
+                </div>
+                <div class="room-card">
+                    <img src="images/suite.jpg" alt="Suite">
+                    <h3>Suite</h3>
+                    <p>Luxuriöse Suiten mit separatem Wohnbereich und exklusiven Annehmlichkeiten für höchsten Komfort.</p>
+                    <div class="room-features">
+                        <span>50m²</span>
+                        <span>2-4 Personen</span>
+                        <span>Whirlpool</span>
+                    </div>
+                    <a href="rooms.html#suite" class="btn-secondary">Details</a>
+                </div>
+            </div>
+            <div class="center">
+                <a href="rooms.html" class="btn">Alle Zimmer ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Hotelausstattung</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <img src="images/restaurant-icon.svg" alt="Restaurant Icon">
+                    <h3>Restaurant</h3>
+                    <p>Genießen Sie lokale und internationale Spezialitäten in unserem hauseigenen Restaurant.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/pool-icon.svg" alt="Pool Icon">
+                    <h3>Swimming Pool</h3>
+                    <p>Entspannen Sie am Pool und genießen Sie die namibische Sonne.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/wifi-icon.svg" alt="WiFi Icon">
+                    <h3>Kostenloses WLAN</h3>
+                    <p>Bleiben Sie mit unserem kostenlosen WLAN im gesamten Hotel verbunden.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/parking-icon.svg" alt="Parking Icon">
+                    <h3>Parkplatz</h3>
+                    <p>Kostenlose Parkplätze stehen unseren Gästen zur Verfügung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Das sagen unsere Gäste</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>"Ein wunderbares Hotel mit freundlichem Personal und ausgezeichnetem Service. Die Zimmer sind geräumig und sehr sauber. Das Restaurant bietet köstliche Speisen. Wir kommen definitiv wieder!"</p>
+                    <div class="testimonial-author">- Familie Müller, Deutschland</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Buchen Sie direkt bei uns und sparen Sie</h2>
+            <p>Sichern Sie sich die besten Preise und exklusive Angebote, wenn Sie direkt über unsere Website buchen.</p>
+            <div class="cta-benefits">
+                <div class="benefit">
+                    <img src="images/discount-icon.svg" alt="Discount Icon">
+                    <h3>Beste Preisgarantie</h3>
+                </div>
+                <div class="benefit">
+                    <img src="images/flexible-icon.svg" alt="Flexible Icon">
+                    <h3>Flexible Stornierung</h3>
+                </div>
+                <div class="benefit">
+                    <img src="images/special-icon.svg" alt="Special Offer Icon">
+                    <h3>Exklusive Angebote</h3>
+                </div>
+            </div>
+            <a href="booking.html" class="btn">Jetzt direkt buchen</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Kupferquelle Hotel</h3>
+                    <p>Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
+                    <p>Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Zimmer & Suiten</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="activities.html">Aktivitäten</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Abonnieren Sie unseren Newsletter für exklusive Angebote und Updates.</p>
+                    <form id="newsletter-form" action="subscribe.php" method="post">
+                        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                        <button type="submit" class="btn-secondary">Abonnieren</button>
+                    </form>
+                </div>
+                <div class="footer-col">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/kupferquelle" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://instagram.com/kupferquelle" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://tripadvisor.com/kupferquelle" target="_blank" rel="noopener"><img src="images/tripadvisor-icon.svg" alt="TripAdvisor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kupferquelle Hotel. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Datenschutz</a>
+                    <a href="terms.html">AGB</a>
+                    <a href="imprint.html">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
