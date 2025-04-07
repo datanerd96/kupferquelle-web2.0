@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F7FA;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGradient" cx="80%" cy="20%" r="15%" fx="80%" fy="20%">
+      <stop offset="0%" style="stop-color:#FFFF00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.8" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="800" height="600" fill="url(#skyGradient)" />
+  
+  <!-- Sun -->
+  <circle cx="700" cy="100" r="60" fill="url(#sunGradient)" />
+  
+  <!-- Lawn -->
+  <rect x="0" y="300" width="800" height="300" fill="#7CFC00" />
+  
+  <!-- Garden Path -->
+  <path d="M300,600 C400,500 500,400 400,300 C300,200 500,200 600,300" stroke="#D2B48C" stroke-width="30" fill="none" />
+  
+  <!-- Hotel Building (Partial View) -->
+  <rect x="-50" y="150" width="300" height="250" fill="#D2B48C" />
+  <rect x="0" y="200" width="50" height="80" fill="#F5F5DC" /> <!-- Window -->
+  <rect x="100" y="200" width="50" height="80" fill="#F5F5DC" /> <!-- Window -->
+  <rect x="200" y="200" width="50" height="80" fill="#F5F5DC" /> <!-- Window -->
+  
+  <!-- Garden Furniture -->
+  <g transform="translate(500,400)">
+    <!-- Table -->
+    <circle cx="0" cy="0" r="30" fill="#8B4513" />
+    <circle cx="0" cy="0" r="25" fill="#A0522D" />
+    <rect x="-5" y="30" width="10" height="50" fill="#8B4513" />
+    
+    <!-- Chairs -->
+    <g transform="translate(-50,0)">
+      <circle cx="0" cy="0" r="15" fill="#A0522D" />
+      <rect x="-5" y="15" width="10" height="40" fill="#8B4513" />
+    </g>
+    <g transform="translate(50,0)">
+      <circle cx="0" cy="0" r="15" fill="#A0522D" />
+      <rect x="-5" y="15" width="10" height="40" fill="#8B4513" />
+    </g>
+    <g transform="translate(0,-50)">
+      <circle cx="0" cy="0" r="15" fill="#A0522D" />
+      <rect x="-5" y="15" width="10" height="40" fill="#8B4513" />
+    </g>
+  </g>
+  
+  <!-- Flowers and Plants -->
+  <g transform="translate(650,500)">
+    <rect x="-5" y="0" width="10" height="50" fill="#006400" />
+    <circle cx="0" cy="-10" r="20" fill="#FF1493" />
+  </g>
+  <g transform="translate(700,520)">
+    <rect x="-5" y="0" width="10" height="40" fill="#006400" />
+    <circle cx="0" cy="-10" r="15" fill="#FF4500" />
+  </g>
+  <g transform="translate(600,530)">
+    <rect x="-5" y="0" width="10" height="30" fill="#006400" />
+    <circle cx="0" cy="-10" r="18" fill="#9932CC" />
+  </g>
+  
+  <!-- Palm Tree -->
+  <g transform="translate(400,350)">
+    <rect x="-15" y="0" width="30" height="150" fill="#8B4513" />
+    <path d="M0,0 L-80,-40 L-60,-60 L-100,-80 L-70,-90 L-110,-120 L-50,-100 L-30,-150 L0,-90 L30,-150 L50,-100 L110,-120 L70,-90 L100,-80 L60,-60 L80,-40 Z" fill="#2E8B57" />
+  </g>
+</svg>

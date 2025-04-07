@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F7FA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2B48C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="1200" height="600" fill="url(#skyGradient)" />
+  
+  <!-- Mountains -->
+  <path d="M0,250 L200,150 L400,200 L600,100 L800,180 L1000,120 L1200,220 L1200,600 L0,600 Z" fill="#8B4513" opacity="0.7" />
+  
+  <!-- Hotel Building -->
+  <rect x="300" y="200" width="600" height="300" fill="url(#buildingGradient)" />
+  
+  <!-- Windows -->
+  <g fill="#F5F5DC">
+    <rect x="350" y="250" width="50" height="70" />
+    <rect x="450" y="250" width="50" height="70" />
+    <rect x="550" y="250" width="50" height="70" />
+    <rect x="650" y="250" width="50" height="70" />
+    <rect x="750" y="250" width="50" height="70" />
+    <rect x="350" y="350" width="50" height="70" />
+    <rect x="450" y="350" width="50" height="70" />
+    <rect x="550" y="350" width="50" height="70" />
+    <rect x="650" y="350" width="50" height="70" />
+    <rect x="750" y="350" width="50" height="70" />
+  </g>
+  
+  <!-- Entrance -->
+  <rect x="550" y="400" width="100" height="100" fill="#8B4513" />
+  
+  <!-- Hotel Sign -->
+  <rect x="500" y="180" width="200" height="40" fill="#F5DEB3" />
+  <text x="600" y="210" font-family="Arial" font-size="24" text-anchor="middle" fill="#8B4513">KUPFERQUELLE HOTEL</text>
+  
+  <!-- Palm Trees -->
+  <g transform="translate(200,350)">
+    <rect x="-10" y="0" width="20" height="100" fill="#8B4513" />
+    <ellipse cx="0" cy="-20" rx="40" ry="60" fill="#2E8B57" />
+  </g>
+  <g transform="translate(1000,350)">
+    <rect x="-10" y="0" width="20" height="100" fill="#8B4513" />
+    <ellipse cx="0" cy="-20" rx="40" ry="60" fill="#2E8B57" />
+  </g>
+  
+  <!-- Swimming Pool -->
+  <ellipse cx="600" cy="550" rx="150" ry="40" fill="#00BFFF" opacity="0.8" />
+</svg>
