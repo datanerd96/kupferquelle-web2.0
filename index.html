@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kupferquelle Hotel - Luxuriöses Hotel in Namibia mit erstklassigem Service, komfortablen Zimmern und hauseigenem Restaurant. Buchen Sie Ihren Aufenthalt direkt bei uns.">
-    <meta name="keywords" content="Kupferquelle, Hotel Namibia, Tsumeb Hotel, Direktbuchung, Luxushotel Namibia">
+    <meta name="description" content="Kupferquelle Hotel - Luxury hotel in Namibia with first-class service, comfortable rooms and in-house restaurant. Book your stay directly with us.">
+    <meta name="keywords" content="Kupferquelle, Hotel Namibia, Tsumeb Hotel, Direct Booking, Luxury Hotel Namibia">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Kupferquelle Hotel - Ihr Luxushotel in Namibia">
-    <meta property="og:description" content="Erleben Sie erstklassigen Service und Komfort im Kupferquelle Hotel. Buchen Sie direkt und sichern Sie sich die besten Preise.">
+    <meta property="og:title" content="Kupferquelle Hotel - Your Luxury Hotel in Namibia">
+    <meta property="og:description" content="Experience first-class service and comfort at Kupferquelle Hotel. Book directly and secure the best rates.">
     <meta property="og:image" content="images/hotel-exterior.jpg">
     <meta property="og:url" content="https://www.kupferquelle.com">
     <meta property="og:type" content="website">
-    <title>Kupferquelle Hotel - Ihr Luxushotel in Namibia | Direkte Buchung</title>
+    <title>Kupferquelle Hotel - Your Luxury Hotel in Namibia | Direct Booking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/background-effects.css">
     <link rel="canonical" href="https://www.kupferquelle.com">
     <script type="application/ld+json">
     {
@@ -55,9 +56,9 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">                  <a href="index.html">-                     <img src="images/logo.png" alt="Kupferquelle Hotel Logo">+                     <img src="images/logo.jpg" alt="Kupferquelle Hotel Logo">                  </a>              </div>
+            <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="Kupferquelle Hotel Logo">
+                    <img src="images/logo.jpg" alt="Kupferquelle Hotel Logo">
                 </a>
             </div>
             <nav>
@@ -68,9 +69,16 @@
                     <li><a href="activities.html">Aktivitäten</a></li>
                     <li><a href="about.html">Über uns</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
-                    <li class="booking-btn"><a href="booking.html">Jetzt Buchen</a></li>
+                    <li class="booking-btn"><a href="#booking" class="btn-primary">Jetzt Buchen</a></li>
                 </ul>
             </nav>
+            <div class="language-selector">
+                <select id="language-selector">
+                    <option value="de">Deutsch</option>
+                    <option value="en" selected>English</option>
+                    <option value="af">Afrikaans</option>
+                </select>
+            </div>
             <div class="mobile-menu-toggle">
                 <span></span>
                 <span></span>
@@ -79,71 +87,30 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-slider">
-            <div class="slide">
-                <img src="images/hero-1.jpg" alt="Kupferquelle Hotel Außenansicht">
-                <div class="slide-content">
-                    <h1>Willkommen im Kupferquelle Hotel</h1>
-                    <p>Ihr Luxushotel im Herzen von Namibia</p>
-                    <a href="booking.html" class="btn">Direkt Buchen</a>
-                </div>
-            </div>
+    <section class="hero-video">
+        <video autoplay muted loop playsinline data-mobile-fallback="images/hero-1.jpg">
+            <source src="videos/hotel-background.mp4" type="video/mp4">
+            <!-- Fallback image for browsers that don't support video -->
+            <img src="images/hero-1.jpg" alt="Kupferquelle Hotel Außenansicht">
+        </video>
+        <div class="hero-video-content">
+            <h1>Willkommen im Kupferquelle Hotel</h1>
+            <p>Ihr Luxushotel im Herzen von Namibia</p>
+            <a href="#explore" class="btn">Hotel Entdecken</a>
         </div>
     </section>
 
-    <section class="booking-widget">
-        <div class="container">
-            <form id="booking-form" action="process-booking.php" method="post">
-                <div class="form-group">
-                    <label for="check-in">Anreise</label>
-                    <input type="date" id="check-in" name="check-in" required>
-                </div>
-                <div class="form-group">
-                    <label for="check-out">Abreise</label>
-                    <input type="date" id="check-out" name="check-out" required>
-                </div>
-                <div class="form-group">
-                    <label for="guests">Gäste</label>
-                    <select id="guests" name="guests" required>
-                        <option value="1">1 Person</option>
-                        <option value="2" selected>2 Personen</option>
-                        <option value="3">3 Personen</option>
-                        <option value="4">4 Personen</option>
-                        <option value="5">5+ Personen</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="room-type">Zimmertyp</label>
-                    <select id="room-type" name="room-type" required>
-                        <option value="standard">Standard Zimmer</option>
-                        <option value="deluxe">Deluxe Zimmer</option>
-                        <option value="suite">Suite</option>
-                        <option value="family">Familienzimmer</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn">Verfügbarkeit Prüfen</button>
-            </form>
+    <section class="about-preview parallax-section namibia-desert" id="explore">
+        <div class="parallax-content">
+            <h2>Über das Kupferquelle Hotel</h2>
+            <p>Das Kupferquelle Hotel ist eine Oase der Ruhe und des Luxus im Herzen von Namibia. Unser Hotel bietet erstklassigen Service, komfortable Zimmer und ein hauseigenes Restaurant mit lokalen und internationalen Spezialitäten.</p>
+            <p>Seit über 50 Jahren empfangen wir Gäste aus aller Welt und bieten ihnen ein unvergessliches Erlebnis in der atemberaubenden Landschaft Namibias.</p>
+            <a href="about.html" class="btn-secondary">Mehr erfahren</a>
         </div>
     </section>
 
-    <section class="about-preview">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>Über das Kupferquelle Hotel</h2>
-                    <p>Das Kupferquelle Hotel ist eine Oase der Ruhe und des Luxus im Herzen von Namibia. Unser Hotel bietet erstklassigen Service, komfortable Zimmer und ein hauseigenes Restaurant mit lokalen und internationalen Spezialitäten.</p>
-                    <p>Seit über 50 Jahren empfangen wir Gäste aus aller Welt und bieten ihnen ein unvergessliches Erlebnis in der atemberaubenden Landschaft Namibias.</p>
-                    <a href="about.html" class="btn-secondary">Mehr erfahren</a>
-                </div>
-                <div class="col">
-                    <img src="images/hotel-garden.jpg" alt="Kupferquelle Hotel Garten">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="rooms-preview">
+    <section class="rooms-preview copper-texture">
+        <div class="floating-element floating-circle" style="top: 10%; left: 5%;"></div>
         <div class="container">
             <h2>Unsere Zimmer & Suiten</h2>
             <div class="room-cards">
@@ -187,7 +154,8 @@
         </div>
     </section>
 
-    <section class="features">
+    <section class="features gold-texture">
+        <div class="floating-element floating-square" style="bottom: 10%; right: 5%;"></div>
         <div class="container">
             <h2>Hotelausstattung</h2>
             <div class="feature-cards">
@@ -215,6 +183,45 @@
         </div>
     </section>
 
+    <section class="booking-widget animated-bg-pattern" id="booking">
+        <div class="container">
+            <div class="booking-header">
+                <h2>Planen Sie Ihren Aufenthalt</h2>
+                <p>Buchen Sie direkt bei uns für die besten Preise und exklusive Vorteile</p>
+            </div>
+            <form id="booking-form" action="process-booking.php" method="post">
+                <div class="form-group">
+                    <label for="check-in">Anreise</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Abreise</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Gäste</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 Person</option>
+                        <option value="2" selected>2 Personen</option>
+                        <option value="3">3 Personen</option>
+                        <option value="4">4 Personen</option>
+                        <option value="5">5+ Personen</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Zimmertyp</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="standard">Standard Zimmer</option>
+                        <option value="deluxe">Deluxe Zimmer</option>
+                        <option value="suite">Suite</option>
+                        <option value="family">Familienzimmer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-booking">Verfügbarkeit Prüfen</button>
+            </form>
+        </div>
+    </section>
+
     <section class="testimonials">
         <div class="container">
             <h2>Das sagen unsere Gäste</h2>
@@ -234,7 +241,8 @@
         </div>
     </section>
 
-    <section class="cta">
+    <section class="cta parallax-deep teal-gradient-overlay" id="booking-cta">
+        <div class="floating-element floating-triangle" style="top: 20%; right: 15%;"></div>
         <div class="container">
             <h2>Buchen Sie direkt bei uns und sparen Sie</h2>
             <p>Sichern Sie sich die besten Preise und exklusive Angebote, wenn Sie direkt über unsere Website buchen.</p>
@@ -242,17 +250,20 @@
                 <div class="benefit">
                     <img src="images/discount-icon.svg" alt="Discount Icon">
                     <h3>Beste Preisgarantie</h3>
+                    <p>Bei uns erhalten Sie immer den günstigsten Preis ohne versteckte Gebühren.</p>
                 </div>
                 <div class="benefit">
                     <img src="images/flexible-icon.svg" alt="Flexible Icon">
                     <h3>Flexible Stornierung</h3>
+                    <p>Kostenlose Stornierung bis zu 48 Stunden vor Anreise.</p>
                 </div>
                 <div class="benefit">
                     <img src="images/special-icon.svg" alt="Special Offer Icon">
                     <h3>Exklusive Angebote</h3>
+                    <p>Zugang zu speziellen Angeboten, die nur bei Direktbuchung verfügbar sind.</p>
                 </div>
             </div>
-            <a href="booking.html" class="btn">Jetzt direkt buchen</a>
+            <a href="#booking" class="btn btn-primary-cta">Jetzt direkt buchen</a>
         </div>
     </section>
 
@@ -286,9 +297,10 @@
                 <div class="footer-col">
                     <h3>Folgen Sie uns</h3>
                     <div class="social-links">
-                        <a href="https://facebook.com/kupferquelle" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
-                        <a href="https://instagram.com/kupferquelle" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
-                        <a href="https://tripadvisor.com/kupferquelle" target="_blank" rel="noopener"><img src="images/tripadvisor-icon.svg" alt="TripAdvisor"></a>
+                        <a href="https://www.facebook.com/kupferquellehotel" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/kupferquellehotel" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g1183065-d1182650-Reviews-Kupferquelle_Resort-Tsumeb_Oshikoto_Region.html" target="_blank" rel="noopener"><img src="images/tripadvisor-icon.svg" alt="TripAdvisor"></a>
+                        <a href="https://www.booking.com/hotel/na/kupferquelle-resort.html" target="_blank" rel="noopener"><img src="images/bookingcom-icon.svg" alt="Booking.com"></a>
                     </div>
                 </div>
             </div>
@@ -304,5 +316,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 </html>

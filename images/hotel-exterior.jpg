@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5f5f5"/>
+  <rect x="50" y="50" width="1100" height="530" fill="#e0e0e0" stroke="#cccccc" stroke-width="2"/>
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="48" text-anchor="middle" fill="#666666">Kupferquelle Hotel</text>
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#888888">Hotel Exterior View</text>
+  <rect x="300" y="380" width="600" height="150" rx="10" ry="10" fill="#8c6d4d"/>
+  <rect x="350" y="400" width="500" height="110" rx="5" ry="5" fill="#f5f5f5"/>
+  <polygon points="600,100 700,200 500,200" fill="#b38c6d"/>
+  <rect x="400" y="200" width="400" height="150" fill="#d9b38c"/>
+  <rect x="450" y="230" width="100" height="100" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+  <rect x="650" y="230" width="100" height="100" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+</svg>

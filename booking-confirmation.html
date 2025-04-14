@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buchungsbestätigung für Ihren Aufenthalt im Kupferquelle Hotel. Überprüfen Sie Ihre Reservierungsdetails und bereiten Sie sich auf Ihren Aufenthalt vor.">
-    <meta name="keywords" content="Kupferquelle, Buchungsbestätigung, Hotelreservierung, Namibia Hotel">
+    <meta name="description" content="Booking confirmation for your stay at Kupferquelle Hotel. Check your reservation details and prepare for your stay.">
+    <meta name="keywords" content="Kupferquelle, Booking Confirmation, Hotel Reservation, Namibia Hotel">
     <meta name="robots" content="noindex, follow">
-    <meta property="og:title" content="Buchungsbestätigung - Kupferquelle Hotel">
-    <meta property="og:description" content="Buchungsbestätigung für Ihren Aufenthalt im Kupferquelle Hotel. Überprüfen Sie Ihre Reservierungsdetails und bereiten Sie sich auf Ihren Aufenthalt vor.">
+    <meta property="og:title" content="Booking Confirmation - Kupferquelle Hotel">
+    <meta property="og:description" content="Booking confirmation for your stay at Kupferquelle Hotel. Check your reservation details and prepare for your stay.">
     <meta property="og:image" content="images/hotel-exterior.jpg">
     <meta property="og:url" content="https://www.kupferquelle.com/booking-confirmation.html">
     <meta property="og:type" content="website">
-    <title>Buchungsbestätigung - Kupferquelle Hotel</title>
+    <title>Booking Confirmation - Kupferquelle Hotel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/background-effects.css">
     <link rel="canonical" href="https://www.kupferquelle.com/booking-confirmation.html">
 </head>
 <body>
@@ -40,8 +41,8 @@
             </nav>
             <div class="language-selector">
                 <select id="language-selector">
-                    <option value="de" selected>Deutsch</option>
-                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en" selected>English</option>
                     <option value="af">Afrikaans</option>
                 </select>
             </div>
@@ -53,25 +54,28 @@
         </div>
     </header>
 
-    <section class="confirmation-section">
-        <div class="container">
-            <div class="confirmation-content">
-                <h1>Vielen Dank für Ihre Buchung!</h1>
-                <div class="confirmation-message">
-                    <p>Ihre Buchung wurde erfolgreich abgeschlossen. Eine Bestätigungs-E-Mail wurde an Ihre angegebene E-Mail-Adresse gesendet.</p>
+    <section class="hero-video">
+        <video autoplay muted loop playsinline data-mobile-fallback="images/hero-1.jpg">
+            <source src="videos/hotel-background.mp4" type="video/mp4">
+            <!-- Fallback image for browsers that don't support video -->
+            <img src="images/hero-1.jpg" alt="Kupferquelle Hotel Außenansicht">
+        </video>
+        <div class="hero-video-content">
+            <h1>Vielen Dank für Ihre Buchung!</h1>
+            <div class="confirmation-message">
+                <p>Ihre Buchung wurde erfolgreich abgeschlossen. Eine Bestätigungs-E-Mail wurde an Ihre angegebene E-Mail-Adresse gesendet.</p>
+            </div>
+              
+            <div class="booking-details">
+                <h2>Buchungsdetails</h2>
+                <div id="booking-summary">
+                    <!-- Booking details will be populated by JavaScript -->
                 </div>
+            </div>
                 
-                <div class="booking-details">
-                    <h2>Buchungsdetails</h2>
-                    <div id="booking-summary">
-                        <!-- Booking details will be populated by JavaScript -->
-                    </div>
-                </div>
-                
-                <div class="confirmation-actions">
-                    <a href="index.html" class="btn-secondary">Zurück zur Startseite</a>
-                    <a href="contact.html" class="btn">Haben Sie Fragen?</a>
-                </div>
+            <div class="confirmation-actions">
+                <a href="index.html" class="btn-secondary">Zurück zur Startseite</a>
+                <a href="contact.html" class="btn">Haben Sie Fragen?</a>
             </div>
         </div>
     </section>
@@ -96,7 +100,6 @@
                     <p>Kostenloses WLAN im gesamten Hotel verfügbar.</p>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer>
@@ -132,6 +135,7 @@
                         <a href="https://facebook.com/kupferquelle" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
                         <a href="https://instagram.com/kupferquelle" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
                         <a href="https://tripadvisor.com/kupferquelle" target="_blank" rel="noopener"><img src="images/tripadvisor-icon.svg" alt="TripAdvisor"></a>
+                        <a href="https://www.booking.com/hotel/na/kupferquelle-resort.html" target="_blank" rel="noopener"><img src="images/bookingcom-icon.svg" alt="Booking.com"></a>
                     </div>
                 </div>
             </div>
@@ -147,6 +151,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/parallax.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Retrieve booking details from session storage

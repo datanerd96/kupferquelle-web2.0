@@ -6,8 +6,8 @@ This repository contains the complete website for Kupferquelle Hotel, a luxury h
 
 ### Multilingual Support
 The website supports multiple languages:
-- German (Default)
-- English
+- English (Default)
+- German
 - Afrikaans
 
 Language switching is handled through the `translations.js` file which contains all text content in the supported languages.

@@ -357,6 +357,9 @@ nav ul li a:hover:after {
 
 #booking-form button {
     margin: 0 10px;
+    height: 45px;
+    align-self: flex-end;
+    margin-bottom: 15px;
 }
 
 /* Booking Section */
