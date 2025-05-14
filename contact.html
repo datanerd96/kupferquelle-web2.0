@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kupferquelle Hotel - Contact us for inquiries, bookings, or any assistance you may need. We are here to help.">
+    <meta name="keywords" content="Kupferquelle, Hotel Namibia, Tsumeb Hotel, Contact Hotel, Hotel Inquiries">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kupferquelle Hotel - Contact Us">
+    <meta property="og:description" content="Get in touch with Kupferquelle Hotel. Find our contact details, send us a message, or locate us on the map.">
+    <meta property="og:image" content="images/contact-hero.jpg">
+    <meta property="og:url" content="https://www.kupferquelle.com/contact.html">
+    <meta property="og:type" content="website">
+    <title>Kupferquelle Hotel - Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/background-effects.css">
+    <link rel="canonical" href="https://www.kupferquelle.com/contact.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Kupferquelle Hotel",
+      "image": "images/hotel-exterior.jpg",
+      "url": "https://www.kupferquelle.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bahnhof Street",
+        "addressLocality": "Tsumeb",
+        "addressRegion": "Oshikoto",
+        "postalCode": "9000",
+        "addressCountry": "Namibia"
+      },
+      "telephone": "+264 67 221 068",
+      "priceRange": "$$$"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Kupferquelle Hotel Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                    <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                    <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                    <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                    <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    <li class="booking-btn"><a href="index.html#booking" class="btn-primary" data-i18n="common.nav.booking">Book Now</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="language-selector">
+                    <option value="de">Deutsch</option>
+                    <option value="en" selected>English</option>
+                    <option value="af">Afrikaans</option>
+                </select>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1 data-i18n="contact.title">Contact Us</h1>
+            </div>
+        </section>
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-form-container">
+                    <h2 data-i18n="contact.form.title">Send Us a Message</h2>
+                    <form id="contact-form" action="submit_contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.nameLabel">Full Name</label>
+                            <input type="text" id="name" name="name" required data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Your Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.emailLabel">Email Address</label>
+                            <input type="email" id="email" name="email" required data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subjectLabel">Subject</label>
+                            <input type="text" id="subject" name="subject" required data-i18n-placeholder="contact.form.subjectPlaceholder" placeholder="Reason for your message">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.messageLabel">Message</label>
+                            <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" data-i18n="contact.form.submitButton">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-details-container">
+                    <h2 data-i18n="contact.details.title">Our Contact Details</h2>
+                    <p data-i18n="contact.details.addressTitle"><strong>Address:</strong></p>
+                    <p data-i18n="contact.details.addressLine1">Kupferquelle Hotel</p>
+                    <p data-i18n="contact.details.addressLine2">Bahnhof Street</p>
+                    <p data-i18n="contact.details.addressLine3">Tsumeb, Namibia, 9000</p>
+
+                    <p data-i18n="contact.details.phoneTitle"><strong>Phone:</strong></p>
+                    <p><a href="tel:+26467221068" data-i18n="contact.details.phoneNumber">+264 67 221 068</a></p>
+
+                    <p data-i18n="contact.details.emailTitle"><strong>Email:</strong></p>
+                    <p><a href="mailto:info@kupferquelle.com" data-i18n="contact.details.emailAddress">info@kupferquelle.com</a></p>
+
+                    <h3 data-i18n="contact.details.mapTitle">Find Us on the Map</h3>
+                    <div class="map-placeholder">
+                        <!-- Placeholder for Google Maps embed -->
+                        <img src="images/map-placeholder.jpg" alt="Map placeholder showing location of Kupferquelle Hotel" style="width:100%; height:auto;">
+                        <p data-i18n="contact.details.mapComingSoon">(Interactive Map Coming Soon)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Kupferquelle Hotel</h3>
+                    <p>Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
+                    <p>Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                        <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+                    <form id="newsletter-form" action="subscribe.php" method="post">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/kupferquellehotel" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/kupferquellehotel" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g1183065-d1182650-Reviews-Kupferquelle_Resort-Tsumeb_Oshikoto_Region.html" target="_blank" rel="noopener"><img src="images/tripadvisor-icon.svg" alt="TripAdvisor"></a>
+                        <a href="https://www.booking.com/hotel/na/kupferquelle-resort.html" target="_blank" rel="noopener"><img src="images/bookingcom-icon.svg" alt="Booking.com"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kupferquelle Hotel. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="imprint.html">Imprint</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/parallax.js"></script>
+</body>
+</html>

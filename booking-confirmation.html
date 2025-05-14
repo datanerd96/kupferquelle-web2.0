@@ -31,12 +31,12 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="rooms.html">Zimmer & Suiten</a></li>
-                    <li><a href="restaurant.html">Restaurant</a></li>
-                    <li><a href="activities.html">Aktivitäten</a></li>
-                    <li><a href="about.html">Über uns</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li class="booking-btn"><a href="booking.html">Jetzt Buchen</a></li>
+                    <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                    <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                    <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                    <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                    <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    <li class="booking-btn"><a href="booking.html" data-i18n="common.nav.booking">Book Now</a></li>
                 </ul>
             </nav>
             <div class="language-selector">
@@ -58,46 +58,46 @@
         <video autoplay muted loop playsinline data-mobile-fallback="images/hero-1.jpg">
             <source src="videos/hotel-background.mp4" type="video/mp4">
             <!-- Fallback image for browsers that don't support video -->
-            <img src="images/hero-1.jpg" alt="Kupferquelle Hotel Außenansicht">
+            <img src="images/hero-1.jpg" alt="" data-i18n="bookingConfirmation.heroVideoFallbackAlt">
         </video>
         <div class="hero-video-content">
-            <h1>Vielen Dank für Ihre Buchung!</h1>
+            <h1 data-i18n="bookingConfirmation.title">Thank you for your booking!</h1>
             <div class="confirmation-message">
-                <p>Ihre Buchung wurde erfolgreich abgeschlossen. Eine Bestätigungs-E-Mail wurde an Ihre angegebene E-Mail-Adresse gesendet.</p>
+                <p data-i18n="bookingConfirmation.message">Your booking has been successfully completed. A confirmation email has been sent to your specified email address.</p>
             </div>
               
             <div class="booking-details">
-                <h2>Buchungsdetails</h2>
+                <h2 data-i18n="bookingConfirmation.detailsTitle">Booking Details</h2>
                 <div id="booking-summary">
                     <!-- Booking details will be populated by JavaScript -->
                 </div>
             </div>
                 
             <div class="confirmation-actions">
-                <a href="index.html" class="btn-secondary">Zurück zur Startseite</a>
-                <a href="contact.html" class="btn">Haben Sie Fragen?</a>
+                <a href="index.html" class="btn-secondary" data-i18n="bookingConfirmation.backHome">Back to Homepage</a>
+                <a href="contact.html" class="btn" data-i18n="bookingConfirmation.contactUs">Have Questions?</a>
             </div>
         </div>
     </section>
 
     <section class="additional-info">
         <div class="container">
-            <h2>Was Sie wissen sollten</h2>
+            <h2 data-i18n="bookingConfirmation.infoTitle">What You Should Know</h2>
             <div class="info-cards">
                 <div class="info-card">
                     <img src="images/check-in-icon.svg" alt="Check-in Icon">
-                    <h3>Check-in & Check-out</h3>
-                    <p>Check-in ab 14:00 Uhr<br>Check-out bis 11:00 Uhr</p>
+                    <h3 data-i18n="bookingConfirmation.checkInOutTitle">Check-in & Check-out</h3>
+                    <p data-i18n="bookingConfirmation.checkInOutText">Check-in from 2:00 PM<br>Check-out until 11:00 AM</p>
                 </div>
                 <div class="info-card">
                     <img src="images/parking-icon.svg" alt="Parking Icon">
-                    <h3>Parken</h3>
-                    <p>Kostenlose Parkplätze stehen für unsere Gäste zur Verfügung.</p>
+                    <h3 data-i18n="bookingConfirmation.parkingTitle">Parking</h3>
+                    <p data-i18n="bookingConfirmation.parkingText">Free parking is available for our guests.</p>
                 </div>
                 <div class="info-card">
                     <img src="images/wifi-icon.svg" alt="WiFi Icon">
-                    <h3>WLAN</h3>
-                    <p>Kostenloses WLAN im gesamten Hotel verfügbar.</p>
+                    <h3 data-i18n="bookingConfirmation.wifiTitle">WiFi</h3>
+                    <p data-i18n="bookingConfirmation.wifiText">Free WiFi available throughout the hotel.</p>
                 </div>
             </div>
     </section>
@@ -106,31 +106,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Kupferquelle Hotel</h3>
-                    <p>Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
-                    <p>Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
+                    <h3 data-i18n="common.footer.hotel">Kupferquelle Hotel</h3>
+                    <p data-i18n="common.footer.address">Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
+                    <p data-i18n="common.footer.contact">Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Links</h3>
+                    <h3 data-i18n="common.footer.links">Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Zimmer & Suiten</a></li>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="activities.html">Aktivitäten</a></li>
-                        <li><a href="about.html">Über uns</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="index.html" data-i18n="common.nav.home">Home</a></li>
+                        <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                        <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Abonnieren Sie unseren Newsletter für exklusive Angebote und Updates.</p>
+                    <h3 data-i18n="common.footer.newsletter">Newsletter</h3>
+                    <p data-i18n="common.footer.newsletterText">Subscribe to our newsletter for exclusive offers and updates.</p>
                     <form id="newsletter-form" action="subscribe.php" method="post">
-                        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-                        <button type="submit" class="btn-secondary">Abonnieren</button>
+                        <input type="email" name="email" placeholder="Your email address" data-i18n="common.footer.emailPlaceholder" required>
+                        <button type="submit" class="btn-secondary" data-i18n="common.footer.subscribe">Subscribe</button>
                     </form>
                 </div>
                 <div class="footer-col">
-                    <h3>Folgen Sie uns</h3>
+                    <h3 data-i18n="common.footer.followUs">Follow Us</h3>
                     <div class="social-links">
                         <a href="https://facebook.com/kupferquelle" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
                         <a href="https://instagram.com/kupferquelle" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
@@ -140,11 +140,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Kupferquelle Hotel. Alle Rechte vorbehalten.</p>
+                <p data-i18n="common.footer.copyright">&copy; 2023 Kupferquelle Hotel. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="privacy.html">Datenschutz</a>
-                    <a href="terms.html">AGB</a>
-                    <a href="imprint.html">Impressum</a>
+                    <a href="privacy.html" data-i18n="common.footer.privacy">Privacy Policy</a>
+                    <a href="terms.html" data-i18n="common.footer.terms">Terms & Conditions</a>
+                    <a href="imprint.html" data-i18n="common.footer.imprint">Imprint</a>
                 </div>
             </div>
         </div>
@@ -152,86 +152,5 @@
 
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Retrieve booking details from session storage
-            const bookingDetailsJSON = sessionStorage.getItem('bookingDetails');
-            
-            if (bookingDetailsJSON) {
-                const bookingDetails = JSON.parse(bookingDetailsJSON);
-                const bookingSummary = document.getElementById('booking-summary');
-                
-                if (bookingSummary) {
-                    // Format dates for display
-                    const checkInDate = new Date(bookingDetails.checkIn);
-                    const checkOutDate = new Date(bookingDetails.checkOut);
-                    const formattedCheckIn = checkInDate.toLocaleDateString('de-DE');
-                    const formattedCheckOut = checkOutDate.toLocaleDateString('de-DE');
-                    
-                    // Get room type name
-                    let roomTypeName = '';
-                    switch(bookingDetails.roomType) {
-                        case 'standard':
-                            roomTypeName = 'Standard Zimmer';
-                            break;
-                        case 'deluxe':
-                            roomTypeName = 'Deluxe Zimmer';
-                            break;
-                        case 'suite':
-                            roomTypeName = 'Suite';
-                            break;
-                        case 'family':
-                            roomTypeName = 'Familienzimmer';
-                            break;
-                        default:
-                            roomTypeName = bookingDetails.roomType;
-                    }
-                    
-                    // Create booking summary HTML
-                    bookingSummary.innerHTML = `
-                        <div class="detail-row">
-                            <span class="detail-label">Buchungsnummer:</span>
-                            <span class="detail-value">${generateBookingNumber()}</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Anreise:</span>
-                            <span class="detail-value">${formattedCheckIn}</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Abreise:</span>
-                            <span class="detail-value">${formattedCheckOut}</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Anzahl der Nächte:</span>
-                            <span class="detail-value">${bookingDetails.nights}</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Anzahl der Gäste:</span>
-                            <span class="detail-value">${bookingDetails.guests}</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Zimmertyp:</span>
-                            <span class="detail-value">${roomTypeName}</span>
-                        </div>
-                        <div class="detail-row total">
-                            <span class="detail-label">Gesamtpreis:</span>
-                            <span class="detail-value">N$ ${bookingDetails.totalPrice.toLocaleString('de-DE')}</span>
-                        </div>
-                    `;
-                }
-            } else {
-                // If no booking details found, redirect to booking page
-                window.location.href = 'booking.html';
-            }
-        });
-        
-        // Generate a random booking number
-        function generateBookingNumber() {
-            const prefix = 'KQ';
-            const timestamp = new Date().getTime().toString().slice(-6);
-            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-            return `${prefix}-${timestamp}-${random}`;
-        }
-    </script>
 </body>
 </html>

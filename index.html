@@ -64,12 +64,12 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="rooms.html">Zimmer & Suiten</a></li>
-                    <li><a href="restaurant.html">Restaurant</a></li>
-                    <li><a href="activities.html">Aktivitäten</a></li>
-                    <li><a href="about.html">Über uns</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li class="booking-btn"><a href="#booking" class="btn-primary">Jetzt Buchen</a></li>
+                    <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                    <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                    <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                    <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                    <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    <li class="booking-btn"><a href="#booking" class="btn-primary" data-i18n="common.nav.booking">Book Now</a></li>
                 </ul>
             </nav>
             <div class="language-selector">
@@ -94,62 +94,73 @@
             <img src="images/hero-1.jpg" alt="Kupferquelle Hotel Außenansicht">
         </video>
         <div class="hero-video-content">
-            <h1>Willkommen im Kupferquelle Hotel</h1>
-            <p>Ihr Luxushotel im Herzen von Namibia</p>
-            <a href="#explore" class="btn">Hotel Entdecken</a>
+            <h1 data-i18n="index.hero.title">Welcome to Kupferquelle Hotel</h1>
+            <p data-i18n="index.hero.subtitle">Your luxury hotel in the heart of Namibia</p>
+            <a href="#explore" class="btn" data-i18n="index.hero.button">Discover the Hotel</a>
         </div>
     </section>
 
     <section class="about-preview parallax-section namibia-desert" id="explore">
         <div class="parallax-content">
-            <h2>Über das Kupferquelle Hotel</h2>
-            <p>Das Kupferquelle Hotel ist eine Oase der Ruhe und des Luxus im Herzen von Namibia. Unser Hotel bietet erstklassigen Service, komfortable Zimmer und ein hauseigenes Restaurant mit lokalen und internationalen Spezialitäten.</p>
-            <p>Seit über 50 Jahren empfangen wir Gäste aus aller Welt und bieten ihnen ein unvergessliches Erlebnis in der atemberaubenden Landschaft Namibias.</p>
-            <a href="about.html" class="btn-secondary">Mehr erfahren</a>
+            <h2 data-i18n="index.aboutPreview.title">About Kupferquelle Hotel</h2>
+            <p data-i18n="index.aboutPreview.description1">Kupferquelle Hotel is an oasis of peace and luxury in the heart of Namibia. Our hotel offers first-class service, comfortable rooms, and an in-house restaurant with local and international specialties.</p>
+            <p data-i18n="index.aboutPreview.description2">For over 50 years, we have been welcoming guests from all over the world, offering them an unforgettable experience in the breathtaking landscape of Namibia.</p>
+            <a href="about.html" class="btn-secondary" data-i18n="index.aboutPreview.button">Learn More</a>
         </div>
     </section>
 
     <section class="rooms-preview copper-texture">
         <div class="floating-element floating-circle" style="top: 10%; left: 5%;"></div>
         <div class="container">
-            <h2>Unsere Zimmer & Suiten</h2>
+            <h2 data-i18n="index.roomsPreview.title">Our Rooms & Suites</h2>
             <div class="room-cards">
                 <div class="room-card">
-                    <img src="images/standard-room.jpg" alt="Standard Zimmer">
-                    <h3>Standard Zimmer</h3>
-                    <p>Komfortable Zimmer mit allem notwendigen Komfort für einen angenehmen Aufenthalt.</p>
+                    <img src="images/One Bedroom Suite 1.jpg" alt="" data-i18n="index.roomsPreview.oneBedroomTitle">
+                    <h3 data-i18n="index.roomsPreview.oneBedroomTitle">One Bedroom Suite</h3>
+                    <p data-i18n="index.roomsPreview.oneBedroomDescription">Suite with living room, separate bedroom, kitchen and private bathroom.</p>
                     <div class="room-features">
-                        <span>25m²</span>
-                        <span>2 Personen</span>
-                        <span>Klimaanlage</span>
+                        <span>20m²</span>
+                        <span>2 Persons</span>
+                        <span>Kitchen</span>
                     </div>
-                    <a href="rooms.html#standard" class="btn-secondary">Details</a>
+                    <a href="rooms.html#oneBedroom" class="btn-secondary" data-i18n="index.roomsPreview.oneBedroomDetailsButton">Details</a>
                 </div>
                 <div class="room-card">
-                    <img src="images/deluxe-room.jpg" alt="Deluxe Zimmer">
-                    <h3>Deluxe Zimmer</h3>
-                    <p>Geräumige Zimmer mit zusätzlichem Komfort und Annehmlichkeiten für einen luxuriösen Aufenthalt.</p>
+                    <img src="images/Standard Family Room 1.jpg" alt="" data-i18n="index.roomsPreview.standardFamilyTitle">
+                    <h3 data-i18n="index.roomsPreview.standardFamilyTitle">Standard Family Room</h3>
+                    <p data-i18n="index.roomsPreview.standardFamilyDescription">Comfortable room with 2 double beds, perfect for families.</p>
                     <div class="room-features">
-                        <span>35m²</span>
-                        <span>2-3 Personen</span>
-                        <span>Balkon</span>
+                        <span>20m²</span>
+                        <span>4 Persons</span>
+                        <span>Balcony</span>
                     </div>
-                    <a href="rooms.html#deluxe" class="btn-secondary">Details</a>
+                    <a href="rooms.html#standardFamily" class="btn-secondary" data-i18n="index.roomsPreview.standardFamilyDetailsButton">Details</a>
                 </div>
                 <div class="room-card">
-                    <img src="images/suite.jpg" alt="Suite">
-                    <h3>Suite</h3>
-                    <p>Luxuriöse Suiten mit separatem Wohnbereich und exklusiven Annehmlichkeiten für höchsten Komfort.</p>
+                    <img src="images/Classic Double Room 1.jpg" alt="Classic Double Room">
+                    <h3 data-i18n="index.roomsPreview.classicDoubleTitle">Classic Double Room</h3>
+                    <p data-i18n="index.roomsPreview.classicDoubleDescription">Cozy room with 1 double bed, air conditioning and patio.</p>
                     <div class="room-features">
-                        <span>50m²</span>
-                        <span>2-4 Personen</span>
-                        <span>Whirlpool</span>
+                        <span>20m²</span>
+                        <span>2 Persons</span>
+                        <span>Patio</span>
                     </div>
-                    <a href="rooms.html#suite" class="btn-secondary">Details</a>
+                    <a href="rooms.html#classicDouble" class="btn-secondary" data-i18n="index.roomsPreview.classicDoubleDetailsButton">Details</a>
+                </div>
+                <div class="room-card">
+                    <img src="images/Family Suite 1.jpg" alt="Family Suite">
+                    <h3 data-i18n="index.roomsPreview.familySuiteTitle">Family Suite</h3>
+                    <p data-i18n="index.roomsPreview.familySuiteDescription">Spacious suite with two bedrooms for larger families or groups.</p>
+                    <div class="room-features">
+                        <span>40m²</span>
+                        <span>6 Persons</span>
+                        <span>Two Bedrooms</span>
+                    </div>
+                    <a href="rooms.html#familySuite" class="btn-secondary" data-i18n="index.roomsPreview.familySuiteDetailsButton">Details</a>
                 </div>
             </div>
             <div class="center">
-                <a href="rooms.html" class="btn">Alle Zimmer ansehen</a>
+                <a href="rooms.html" class="btn" data-i18n="index.roomsPreview.allRoomsButton">View All Rooms</a>
             </div>
         </div>
     </section>
@@ -157,27 +168,27 @@
     <section class="features gold-texture">
         <div class="floating-element floating-square" style="bottom: 10%; right: 5%;"></div>
         <div class="container">
-            <h2>Hotelausstattung</h2>
+            <h2 data-i18n="index.features.title">Hotel Amenities</h2>
             <div class="feature-cards">
                 <div class="feature-card">
                     <img src="images/restaurant-icon.svg" alt="Restaurant Icon">
-                    <h3>Restaurant</h3>
-                    <p>Genießen Sie lokale und internationale Spezialitäten in unserem hauseigenen Restaurant.</p>
+                    <h3 data-i18n="index.features.restaurantTitle">Restaurant</h3>
+                    <p data-i18n="index.features.restaurantDescription">Enjoy local and international specialties in our in-house restaurant.</p>
                 </div>
                 <div class="feature-card">
                     <img src="images/pool-icon.svg" alt="Pool Icon">
-                    <h3>Swimming Pool</h3>
-                    <p>Entspannen Sie am Pool und genießen Sie die namibische Sonne.</p>
+                    <h3 data-i18n="index.features.poolTitle">Swimming Pool</h3>
+                    <p data-i18n="index.features.poolDescription">Relax by the pool and enjoy the Namibian sun.</p>
                 </div>
                 <div class="feature-card">
                     <img src="images/wifi-icon.svg" alt="WiFi Icon">
-                    <h3>Kostenloses WLAN</h3>
-                    <p>Bleiben Sie mit unserem kostenlosen WLAN im gesamten Hotel verbunden.</p>
+                    <h3 data-i18n="index.features.wifiTitle">Free WiFi</h3>
+                    <p data-i18n="index.features.wifiDescription">Stay connected with our free WiFi throughout the hotel.</p>
                 </div>
                 <div class="feature-card">
                     <img src="images/parking-icon.svg" alt="Parking Icon">
-                    <h3>Parkplatz</h3>
-                    <p>Kostenlose Parkplätze stehen unseren Gästen zur Verfügung.</p>
+                    <h3 data-i18n="index.features.parkingTitle">Parking</h3>
+                    <p data-i18n="index.features.parkingDescription">Free parking is available to our guests.</p>
                 </div>
             </div>
         </div>
@@ -186,45 +197,45 @@
     <section class="booking-widget animated-bg-pattern" id="booking">
         <div class="container">
             <div class="booking-header">
-                <h2>Planen Sie Ihren Aufenthalt</h2>
-                <p>Buchen Sie direkt bei uns für die besten Preise und exklusive Vorteile</p>
+                <h2 data-i18n="index.bookingWidget.title">Plan Your Stay</h2>
+                <p data-i18n="index.bookingWidget.subtitle">Book directly with us for the best prices and exclusive benefits</p>
             </div>
             <form id="booking-form" action="process-booking.php" method="post">
                 <div class="form-group">
-                    <label for="check-in">Anreise</label>
+                    <label for="check-in" data-i18n="index.bookingWidget.checkInLabel">Check-in</label>
                     <input type="date" id="check-in" name="check-in" required>
                 </div>
                 <div class="form-group">
-                    <label for="check-out">Abreise</label>
+                    <label for="check-out" data-i18n="index.bookingWidget.checkOutLabel">Check-out</label>
                     <input type="date" id="check-out" name="check-out" required>
                 </div>
                 <div class="form-group">
-                    <label for="guests">Gäste</label>
+                    <label for="guests">Guests</label>
                     <select id="guests" name="guests" required>
                         <option value="1">1 Person</option>
-                        <option value="2" selected>2 Personen</option>
-                        <option value="3">3 Personen</option>
-                        <option value="4">4 Personen</option>
-                        <option value="5">5+ Personen</option>
+                        <option value="2" selected>2 Persons</option>
+                        <option value="3">3 Persons</option>
+                        <option value="4">4 Persons</option>
+                        <option value="5">5+ Persons</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="room-type">Zimmertyp</label>
+                    <label for="room-type" data-i18n="index.bookingWidget.roomTypeLabel">Room Type</label>
                     <select id="room-type" name="room-type" required>
-                        <option value="standard">Standard Zimmer</option>
-                        <option value="deluxe">Deluxe Zimmer</option>
-                        <option value="suite">Suite</option>
-                        <option value="family">Familienzimmer</option>
+                        <option value="oneBedroom" data-i18n="index.bookingWidget.roomType.oneBedroom">One Bedroom Suite</option>
+                        <option value="standardFamily" data-i18n="index.bookingWidget.roomType.standardFamily">Standard Family Room</option>
+                        <option value="classicDouble" data-i18n="index.bookingWidget.roomType.classicDouble">Classic Double Room</option>
+                        <option value="familySuite" data-i18n="index.bookingWidget.roomType.familySuite">Family Suite</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-booking">Verfügbarkeit Prüfen</button>
+                <button type="submit" class="btn btn-booking">Check Availability</button>
             </form>
         </div>
     </section>
 
     <section class="testimonials">
         <div class="container">
-            <h2>Das sagen unsere Gäste</h2>
+            <h2>What Our Guests Say</h2>
             <div class="testimonial-slider">
                 <div class="testimonial">
                     <div class="stars">
@@ -234,8 +245,8 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p>"Ein wunderbares Hotel mit freundlichem Personal und ausgezeichnetem Service. Die Zimmer sind geräumig und sehr sauber. Das Restaurant bietet köstliche Speisen. Wir kommen definitiv wieder!"</p>
-                    <div class="testimonial-author">- Familie Müller, Deutschland</div>
+                    <p data-i18n="index.testimonials.customer1">"A wonderful hotel with friendly staff and excellent service. The rooms are spacious and very clean. The restaurant offers delicious food. We will definitely come back!"</p>
+                    <div class="testimonial-author">- Müller Family, Germany</div>
                 </div>
             </div>
         </div>
@@ -244,26 +255,26 @@
     <section class="cta parallax-deep teal-gradient-overlay" id="booking-cta">
         <div class="floating-element floating-triangle" style="top: 20%; right: 15%;"></div>
         <div class="container">
-            <h2>Buchen Sie direkt bei uns und sparen Sie</h2>
-            <p>Sichern Sie sich die besten Preise und exklusive Angebote, wenn Sie direkt über unsere Website buchen.</p>
+            <h2>Book Directly With Us and Save</h2>
+            <p>Secure the best prices and exclusive offers when you book directly through our website.</p>
             <div class="cta-benefits">
                 <div class="benefit">
                     <img src="images/discount-icon.svg" alt="Discount Icon">
-                    <h3>Beste Preisgarantie</h3>
-                    <p>Bei uns erhalten Sie immer den günstigsten Preis ohne versteckte Gebühren.</p>
+                    <h3>Best Price Guarantee</h3>
+                    <p>With us, you always get the best price without hidden fees.</p>
                 </div>
                 <div class="benefit">
                     <img src="images/flexible-icon.svg" alt="Flexible Icon">
-                    <h3>Flexible Stornierung</h3>
-                    <p>Kostenlose Stornierung bis zu 48 Stunden vor Anreise.</p>
+                    <h3>Flexible Cancellation</h3>
+                    <p>Free cancellation up to 48 hours before arrival.</p>
                 </div>
                 <div class="benefit">
                     <img src="images/special-icon.svg" alt="Special Offer Icon">
-                    <h3>Exklusive Angebote</h3>
-                    <p>Zugang zu speziellen Angeboten, die nur bei Direktbuchung verfügbar sind.</p>
+                    <h3>Exclusive Offers</h3>
+                    <p>Access to special offers available only with direct booking.</p>
                 </div>
             </div>
-            <a href="#booking" class="btn btn-primary-cta">Jetzt direkt buchen</a>
+            <a href="#booking" class="btn btn-primary-cta">Book Directly Now</a>
         </div>
     </section>
 
@@ -279,23 +290,23 @@
                     <h3>Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Zimmer & Suiten</a></li>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="activities.html">Aktivitäten</a></li>
-                        <li><a href="about.html">Über uns</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                        <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Newsletter</h3>
-                    <p>Abonnieren Sie unseren Newsletter für exklusive Angebote und Updates.</p>
+                    <p>Subscribe to our newsletter for exclusive offers and updates.</p>
                     <form id="newsletter-form" action="subscribe.php" method="post">
-                        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-                        <button type="submit" class="btn-secondary">Abonnieren</button>
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-secondary">Subscribe</button>
                     </form>
                 </div>
                 <div class="footer-col">
-                    <h3>Folgen Sie uns</h3>
+                    <h3>Follow Us</h3>
                     <div class="social-links">
                         <a href="https://www.facebook.com/kupferquellehotel" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
                         <a href="https://www.instagram.com/kupferquellehotel" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
@@ -305,11 +316,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Kupferquelle Hotel. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2023 Kupferquelle Hotel. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="privacy.html">Datenschutz</a>
-                    <a href="terms.html">AGB</a>
-                    <a href="imprint.html">Impressum</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="imprint.html">Imprint</a>
                 </div>
             </div>
         </div>

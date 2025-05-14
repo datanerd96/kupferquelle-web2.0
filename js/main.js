@@ -17,14 +17,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Initialize booking confirmation page
-    if (document.querySelector('.confirmation-section')) {
+    if (document.getElementById('booking-summary')) { // Changed condition here
         displayBookingConfirmation();
     }
 });
 
+// Generate a unique booking number
+function generateBookingNumber() {
+    const prefix = 'KQ';
+    const timestamp = new Date().getTime().toString().slice(-6);
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    return `${prefix}-${timestamp}-${random}`;
+}
+
 // Function to display booking confirmation details
 function displayBookingConfirmation() {
     const bookingDetailsJSON = sessionStorage.getItem('bookingDetails');
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en'; // Get current language
+    const locale = currentLang === 'de' ? 'de-DE' : (currentLang === 'af' ? 'af-ZA' : 'en-US'); // Map language to locale
 
     if (bookingDetailsJSON) {
         const bookingDetails = JSON.parse(bookingDetailsJSON);
@@ -34,26 +44,51 @@ function displayBookingConfirmation() {
             // Format dates for display
             const checkInDate = new Date(bookingDetails.checkIn);
             const checkOutDate = new Date(bookingDetails.checkOut);
-            const formattedCheckIn = checkInDate.toLocaleDateString('en-US');
-            const formattedCheckOut = checkOutDate.toLocaleDateString('en-US');
+            const formattedCheckIn = checkInDate.toLocaleDateString(locale);
+            const formattedCheckOut = checkOutDate.toLocaleDateString(locale);
 
             // Get room type name based on the current language
-            const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-            let roomTypeName = getRoomTypeName(bookingDetails.roomType, currentLang);
+            let roomTypeName = getRoomTypeName(bookingDetails.roomType, currentLang); // Assumes getRoomTypeName is available globally
 
-            // Create HTML for booking summary
             bookingSummary.innerHTML = `
-                <div class="booking-info">
-                    <p><strong>Booking Number:</strong> KQ-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}</p>
-                    <p><strong>Check-in:</strong> ${formattedCheckIn}</p>
-                    <p><strong>Check-out:</strong> ${formattedCheckOut}</p>
-                    <p><strong>Number of Nights:</strong> ${bookingDetails.nights}</p>
-                    <p><strong>Number of Guests:</strong> ${bookingDetails.guests}</p>
-                    <p><strong>Room Type:</strong> ${roomTypeName}</p>
-                    <p><strong>Total Price:</strong> NAD ${bookingDetails.totalPrice.toLocaleString('en-US')}</p>
+                <div class="detail-row">
+                    <span class="detail-label" data-i18n="bookingConfirmation.bookingNumberLabel">Booking Number:</span>
+                    <span class="detail-value">${generateBookingNumber()}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label" data-i18n="bookingConfirmation.checkInLabel">Check-In:</span>
+                    <span class="detail-value">${formattedCheckIn}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label" data-i18n="bookingConfirmation.checkOutLabel">Check-Out:</span>
+                    <span class="detail-value">${formattedCheckOut}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label" data-i18n="bookingConfirmation.nightsLabel">Number of Nights:</span>
+                    <span class="detail-value">${bookingDetails.nights}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label" data-i18n="bookingConfirmation.guestsLabel">Number of Guests:</span>
+                    <span class="detail-value">${bookingDetails.guests}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label" data-i18n="bookingConfirmation.roomTypeLabel">Room Type:</span>
+                    <span class="detail-value">${roomTypeName}</span>
+                </div>
+                <div class="detail-row total">
+                    <span class="detail-label" data-i18n="bookingConfirmation.totalPriceLabel">Total Price:</span>
+                    <span class="detail-value">N$ ${bookingDetails.totalPrice.toLocaleString(locale)}</span>
                 </div>
             `;
+
+            // Re-apply translations for the newly added elements
+            if (window.applyTranslations) {
+                 window.applyTranslations(currentLang);
+            }
         }
+    } else {
+        // If no booking details found, redirect to booking page
+        window.location.href = 'booking.html';
     }
 }
 
@@ -121,12 +156,14 @@ const translations = window.translations || {};
 
 // Language selector functionality
 function initLanguageSelector() {
+    // Always determine and apply the language on initial load
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    document.documentElement.lang = currentLang; // Set lang attribute early
+    applyTranslations(currentLang); // Apply translations regardless of selector presence
+
     const languageSelector = document.getElementById('language-selector');
     if (languageSelector) {
-        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-        languageSelector.value = currentLang;
-        applyTranslations(currentLang);
-
+        languageSelector.value = currentLang; // Set selector value if it exists
         languageSelector.addEventListener('change', function () {
             const selectedLanguage = this.value;
             changeLanguage(selectedLanguage);
@@ -158,19 +195,36 @@ function applyTranslations(lang) {
             }
         }
 
-        if (translation[lang]) {
-            if (element.tagName === 'INPUT' && element.getAttribute('type') === 'placeholder') {
-                element.placeholder = translation[lang];
+        let textToApply = translation[lang];
+        // Fallback to English if translation for the current language is missing, but English exists
+        if (typeof textToApply === 'undefined' && typeof translation['en'] !== 'undefined' && lang !== 'en') {
+            // console.warn(`Translation missing for key '${key}' in language '${lang}'. Falling back to English.`);
+            textToApply = translation['en'];
+        }
+        
+        if (typeof textToApply !== 'undefined') { // Proceed only if a translation string is available
+            if ((element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') && element.hasAttribute('placeholder')) {
+                element.placeholder = textToApply;
+            } else if (element.tagName === 'IMG' && element.hasAttribute('alt')) {
+                element.alt = textToApply;
             } else if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
-                element.content = translation[lang];
+                element.content = textToApply;
+            } else if (element.tagName === 'INPUT' && (element.type === 'button' || element.type === 'submit' || element.type === 'reset')) {
+                element.value = textToApply;
+            } else if (element.tagName === 'OPTION') {
+                element.textContent = textToApply;
             } else {
-                element.innerHTML = translation[lang];
+                if (element.tagName !== 'INPUT' && element.tagName !== 'TEXTAREA' && element.tagName !== 'SELECT') {
+                    element.innerHTML = textToApply;
+                }
             }
+        } else {
+            // console.warn(`No translation (including English fallback) found for key: ${key}`);
         }
     });
     
     // Set the document language
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang; // Ensure this is set
     
     // Apply translations to navigation menu
     const navItems = document.querySelectorAll('nav ul li a');
@@ -188,14 +242,30 @@ function applyTranslations(lang) {
         
         // Apply translation if we have a key and it exists in translations
         if (key && translations.common && translations.common.nav && translations.common.nav[key]) {
-            item.textContent = translations.common.nav[key][lang];
+            let navText = translations.common.nav[key][lang];
+            // Fallback to English if translation for the current language is missing, but English for the key exists
+            if (typeof navText === 'undefined' && typeof translations.common.nav[key]['en'] !== 'undefined' && lang !== 'en') {
+                navText = translations.common.nav[key]['en'];
+            }
+
+            if (typeof navText !== 'undefined') { // Proceed only if a translation string is available
+                item.textContent = navText;
+            }
+            // If navText is still undefined (e.g. key itself or 'en' version is missing),
+            // item.textContent remains unchanged, preserving the original HTML text.
         }
     });
     
     // Apply translation to booking button
     const bookingBtn = document.querySelector('.booking-btn a');
     if (bookingBtn && translations.common && translations.common.nav && translations.common.nav.booking) {
-        bookingBtn.textContent = translations.common.nav.booking[lang];
+        let bookingBtnText = translations.common.nav.booking[lang];
+        if (typeof bookingBtnText === 'undefined' && typeof translations.common.nav.booking['en'] !== 'undefined' && lang !== 'en') {
+            bookingBtnText = translations.common.nav.booking['en'];
+        }
+        if (typeof bookingBtnText !== 'undefined') {
+            bookingBtn.textContent = bookingBtnText;
+        }
     }
     
     // Apply translations to page-specific content
@@ -297,47 +367,16 @@ function updateBookingPageContent(lang) {
 
 // Function to update booking confirmation page content
 function updateConfirmationPageContent(lang) {
-    // Get booking details from session storage
-    const bookingDetailsJSON = sessionStorage.getItem('bookingDetails');
-    
-    if (bookingDetailsJSON) {
-        const bookingDetails = JSON.parse(bookingDetailsJSON);
-        const bookingSummary = document.getElementById('booking-summary');
-        
-        if (bookingSummary) {
-            // Format dates for display
-            const checkInDate = new Date(bookingDetails.checkIn);
-            const checkOutDate = new Date(bookingDetails.checkOut);
-            const formattedCheckIn = checkInDate.toLocaleDateString(lang === 'en' ? 'en-US' : (lang === 'af' ? 'af-ZA' : 'de-DE'));
-            const formattedCheckOut = checkOutDate.toLocaleDateString(lang === 'en' ? 'en-US' : (lang === 'af' ? 'af-ZA' : 'de-DE'));
-            
-            // Get room type name based on the current language
-            let roomTypeName = getRoomTypeName(bookingDetails.roomType, lang);
-            
-            // Create HTML for booking summary with translated labels
-            const labels = {
-                bookingNumber: translations.booking?.confirmation?.bookingNumber?.[lang] || 'Buchungsnummer:',
-                checkIn: translations.booking?.confirmation?.checkIn?.[lang] || 'Anreise:',
-                checkOut: translations.booking?.confirmation?.checkOut?.[lang] || 'Abreise:',
-                nights: translations.booking?.confirmation?.nights?.[lang] || 'Anzahl der Nächte:',
-                guests: translations.booking?.confirmation?.guests?.[lang] || 'Anzahl der Gäste:',
-                roomType: translations.booking?.confirmation?.roomType?.[lang] || 'Zimmertyp:',
-                totalPrice: translations.booking?.confirmation?.totalPrice?.[lang] || 'Gesamtpreis:'
-            };
-            
-            bookingSummary.innerHTML = `
-                <div class="booking-info">
-                    <p><strong>${labels.bookingNumber}</strong> KQ-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}</p>
-                    <p><strong>${labels.checkIn}</strong> ${formattedCheckIn}</p>
-                    <p><strong>${labels.checkOut}</strong> ${formattedCheckOut}</p>
-                    <p><strong>${labels.nights}</strong> ${bookingDetails.nights}</p>
-                    <p><strong>${labels.guests}</strong> ${bookingDetails.guests}</p>
-                    <p><strong>${labels.roomType}</strong> ${roomTypeName}</p>
-                    <p><strong>${labels.totalPrice}</strong> NAD ${bookingDetails.totalPrice.toLocaleString(lang === 'en' ? 'en-US' : (lang === 'af' ? 'af-ZA' : 'de-DE'))}</p>
-                </div>
-            `;
-        }
-    }
+    // The dynamic booking details are now handled by displayBookingConfirmation.
+    // This function can be used for other static translatable elements on the confirmation page if any.
+    // Or, rely on the generic applyTranslations to handle all data-i18n attributes.
+    // For now, we ensure it doesn't conflict with displayBookingConfirmation's work on #booking-summary.
+
+    // Example: if there were other elements to translate on this page:
+    // const pageTitle = document.querySelector('.confirmation-page-title'); // Fictional element
+    // if (pageTitle && translations.bookingConfirmation && translations.bookingConfirmation.pageTitle) {
+    //     pageTitle.textContent = translations.bookingConfirmation.pageTitle[lang] || translations.bookingConfirmation.pageTitle['en'];
+    // }
 }
 
 function getCurrentPage() {

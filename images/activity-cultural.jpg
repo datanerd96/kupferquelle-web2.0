@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#f5f5f5"/>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#333">Cultural Village Tour</text>
+  <circle cx="400" cy="150" r="50" fill="#00857e"/>
+  <path d="M380,140 L420,140" stroke="#fff" stroke-width="3"/>
+  <path d="M380,160 L420,160" stroke="#fff" stroke-width="3"/>
+  <path d="M350,250 L450,250" stroke="#8b5a2b" stroke-width="5"/>
+  <path d="M370,250 L370,200 L430,200 L430,250" fill="#e8a923"/>
+  <path d="M390,250 L390,220 L410,220 L410,250" fill="#8b5a2b"/>
+  <path d="M320,300 L480,300 L480,250 L320,250 Z" fill="#00857e" opacity="0.3"/>
+</svg>

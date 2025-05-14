@@ -31,12 +31,12 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="rooms.html">Zimmer & Suiten</a></li>
-                    <li><a href="restaurant.html">Restaurant</a></li>
-                    <li><a href="activities.html">Aktivitäten</a></li>
-                    <li><a href="about.html">Über uns</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li class="booking-btn"><a href="booking.html">Jetzt Buchen</a></li>
+                    <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                    <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                    <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                    <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                    <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
+                    <li class="booking-btn"><a href="booking.html" data-i18n="common.nav.booking">Book Now</a></li>
                 </ul>
             </nav>
             <div class="language-selector">
@@ -56,80 +56,80 @@
 
     <section class="page-banner">
         <div class="container">
-            <h1>Direkte Buchung</h1>
-            <p>Buchen Sie direkt bei uns und genießen Sie die besten Preise und Vorteile</p>
+            <h1 data-i18n="booking.pageBanner.title">Direct Booking</h1>
+            <p data-i18n="booking.pageBanner.subtitle">Book directly with us and enjoy the best rates and benefits</p>
         </div>
     </section>
 
     <section class="booking-section">
         <div class="container">
             <div class="booking-advantages">
-                <h2>Vorteile der Direktbuchung</h2>
+                <h2 data-i18n="booking.advantages.title">Advantages of Direct Booking</h2>
                 <div class="advantages-grid">
                     <div class="advantage-card">
-                        <img src="images/best-price-icon.svg" alt="Bester Preis Icon">
-                        <h3>Beste Preisgarantie</h3>
-                        <p>Bei uns erhalten Sie immer den günstigsten Preis ohne versteckte Gebühren.</p>
+                        <img src="images/best-price-icon.svg" alt="Best Price Icon" data-i18n-alt="booking.advantages.bestPrice.bestPriceIconAlt">
+                        <h3 data-i18n="booking.advantages.bestPrice.title">Best Price Guarantee</h3>
+                        <p data-i18n="booking.advantages.bestPrice.text">With us, you always get the best price without hidden fees.</p>
                     </div>
                     <div class="advantage-card">
-                        <img src="images/flexible-icon.svg" alt="Flexibilität Icon">
-                        <h3>Flexible Stornierung</h3>
-                        <p>Kostenlose Stornierung bis zu 48 Stunden vor Anreise.</p>
+                        <img src="images/flexible-icon.svg" alt="Flexibility Icon" data-i18n-alt="booking.advantages.flexibleCancellation.flexibleCancellationIconAlt">
+                        <h3 data-i18n="booking.advantages.flexibleCancellation.title">Flexible Cancellation</h3>
+                        <p data-i18n="booking.advantages.flexibleCancellation.text">Free cancellation up to 48 hours before arrival.</p>
                     </div>
                     <div class="advantage-card">
-                        <img src="images/special-icon.svg" alt="Spezialangebote Icon">
-                        <h3>Exklusive Angebote</h3>
-                        <p>Zugang zu speziellen Angeboten, die nur bei Direktbuchung verfügbar sind.</p>
+                        <img src="images/special-icon.svg" alt="Special Offers Icon" data-i18n-alt="booking.advantages.exclusiveOffers.exclusiveOffersIconAlt">
+                        <h3 data-i18n="booking.advantages.exclusiveOffers.title">Exclusive Offers</h3>
+                        <p data-i18n="booking.advantages.exclusiveOffers.text">Access to special offers available only with direct booking.</p>
                     </div>
                 </div>
             </div>
 
             <div class="booking-form-container">
-                <h2>Ihre Buchung</h2>
+                <h2 data-i18n="booking.form.title">Your Booking</h2>
                 <form id="booking-form" action="process-booking.php" method="post">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="check-in">Anreise</label>
+                            <label for="check-in" data-i18n="booking.form.checkInLabel">Check-in</label>
                             <input type="date" id="check-in" name="check-in" required>
                         </div>
                         <div class="form-group">
-                            <label for="check-out">Abreise</label>
+                            <label for="check-out" data-i18n="booking.form.checkOutLabel">Check-out</label>
                             <input type="date" id="check-out" name="check-out" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="guests">Gäste</label>
+                            <label for="guests" data-i18n="booking.form.guestsLabel">Guests</label>
                             <select id="guests" name="guests" required>
-                                <option value="1">1 Person</option>
-                                <option value="2" selected>2 Personen</option>
-                                <option value="3">3 Personen</option>
-                                <option value="4">4 Personen</option>
-                                <option value="5">5+ Personen</option>
+                                <option value="1" data-i18n="booking.form.guests.one">1 Person</option>
+                                <option value="2" selected data-i18n="booking.form.guests.two">2 Persons</option>
+                                <option value="3" data-i18n="booking.form.guests.three">3 Persons</option>
+                                <option value="4" data-i18n="booking.form.guests.four">4 Persons</option>
+                                <option value="5" data-i18n="booking.form.guests.fivePlus">5+ Persons</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="room-type">Zimmertyp</label>
+                            <label for="room-type" data-i18n="booking.form.roomTypeLabel">Room Type</label>
                             <select id="room-type" name="room-type" required>
-                                <option value="standard">Standard Zimmer</option>
-                                <option value="deluxe">Deluxe Zimmer</option>
-                                <option value="suite">Suite</option>
-                                <option value="family">Familienzimmer</option>
+                                <option value="oneBedroom" data-i18n="booking.form.roomType.oneBedroom">One Bedroom Suite</option>
+                                <option value="standardFamily" data-i18n="booking.form.roomType.standardFamily">Standard Family Room</option>
+                                <option value="classicDouble" data-i18n="booking.form.roomType.classicDouble">Classic Double Room</option>
+                                <option value="familySuite" data-i18n="booking.form.roomType.familySuite">Family Suite</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group full-width">
-                            <label for="special-requests">Besondere Wünsche</label>
+                            <label for="special-requests" data-i18n="booking.form.specialRequestsLabel">Special Requests</label>
                             <textarea id="special-requests" name="special-requests" rows="3"></textarea>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group full-width">
-                            <button type="submit" class="btn">Jetzt Buchen</button>
+                            <button type="submit" class="btn" data-i18n="booking.form.bookNowButton">Book Now</button>
                         </div>
                     </div>
                 </form>
@@ -139,33 +139,42 @@
 
     <section class="room-preview">
         <div class="container">
-            <h2>Unsere Zimmer</h2>
+            <h2 data-i18n="booking.roomPreview.title">Our Rooms</h2>
             <div class="room-cards">
                 <div class="room-card">
-                    <img src="images/standard-room.jpg" alt="Standard Zimmer">
+                    <img src="images/One Bedroom Suite 1.jpg" alt="One Bedroom Suite" data-i18n-alt="booking.roomPreview.oneBedroom.alt">
                     <div class="room-info">
-                        <h3>Standard Zimmer</h3>
-                        <p>Komfortables Zimmer mit allen grundlegenden Annehmlichkeiten für einen angenehmen Aufenthalt.</p>
-                        <p class="price">Ab N$ 1.200 pro Nacht</p>
-                        <a href="rooms.html#standard" class="btn-secondary">Details</a>
+                        <h3 data-i18n="booking.roomPreview.oneBedroom.title">One Bedroom Suite</h3>
+                        <p data-i18n="booking.roomPreview.oneBedroom.description">20 m² suite with living room, separate bedroom, kitchen and private bathroom.</p>
+                        <p class="price" data-i18n="booking.roomPreview.oneBedroom.price">From N$ 1,800 per night</p>
+                        <a href="rooms.html#oneBedroom" class="btn-secondary" data-i18n="booking.roomPreview.detailsButton">Details</a>
                     </div>
                 </div>
                 <div class="room-card">
-                    <img src="images/deluxe-room.jpg" alt="Deluxe Zimmer">
+                    <img src="images/Standard Family Room 1.jpg" alt="Standard Family Room" data-i18n-alt="booking.roomPreview.standardFamily.alt">
                     <div class="room-info">
-                        <h3>Deluxe Zimmer</h3>
-                        <p>Geräumiges Zimmer mit zusätzlichem Komfort und schönem Ausblick.</p>
-                        <p class="price">Ab N$ 1.800 pro Nacht</p>
-                        <a href="rooms.html#deluxe" class="btn-secondary">Details</a>
+                        <h3 data-i18n="booking.roomPreview.standardFamily.title">Standard Family Room</h3>
+                        <p data-i18n="booking.roomPreview.standardFamily.description">20 m² room with 2 double beds, balcony and air conditioning.</p>
+                        <p class="price" data-i18n="booking.roomPreview.standardFamily.price">From N$ 1,500 per night</p>
+                        <a href="rooms.html#standardFamily" class="btn-secondary" data-i18n="booking.roomPreview.detailsButton">Details</a>
                     </div>
                 </div>
                 <div class="room-card">
-                    <img src="images/suite.jpg" alt="Suite">
+                    <img src="images/Classic Double Room 1.jpg" alt="Classic Double Room" data-i18n-alt="booking.roomPreview.classicDouble.alt">
                     <div class="room-info">
-                        <h3>Suite</h3>
-                        <p>Luxuriöse Suite mit separatem Wohnbereich und erstklassigen Annehmlichkeiten.</p>
-                        <p class="price">Ab N$ 2.500 pro Nacht</p>
-                        <a href="rooms.html#suite" class="btn-secondary">Details</a>
+                        <h3 data-i18n="booking.roomPreview.classicDouble.title">Classic Double Room</h3>
+                        <p data-i18n="booking.roomPreview.classicDouble.description">Cozy 20 m² room with 1 double bed, air conditioning and patio.</p>
+                        <p class="price" data-i18n="booking.roomPreview.classicDouble.price">From N$ 1,200 per night</p>
+                        <a href="rooms.html#classicDouble" class="btn-secondary" data-i18n="booking.roomPreview.detailsButton">Details</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="images/Family Suite 1.jpg" alt="Family Suite" data-i18n-alt="booking.roomPreview.familySuite.alt">
+                    <div class="room-info">
+                        <h3 data-i18n="booking.roomPreview.familySuite.title">Family Suite</h3>
+                        <p data-i18n="booking.roomPreview.familySuite.description">Spacious suite with two bedrooms for larger families or groups.</p>
+                        <p class="price" data-i18n="booking.roomPreview.familySuite.price">From N$ 2,500 per night</p>
+                        <a href="rooms.html#familySuite" class="btn-secondary" data-i18n="booking.roomPreview.detailsButton">Details</a>
                     </div>
                 </div>
             </div>
@@ -176,31 +185,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Kupferquelle Hotel</h3>
-                    <p>Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
-                    <p>Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
+                    <h3 data-i18n="common.footer.hotel">Kupferquelle Hotel</h3>
+                    <p data-i18n="common.footer.address">Bahnhof Street<br>Tsumeb, Namibia<br>9000</p>
+                    <p data-i18n="common.footer.contact">Tel: +264 67 221 068<br>Email: info@kupferquelle.com</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Links</h3>
+                    <h3 data-i18n="common.footer.links">Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Zimmer & Suiten</a></li>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="activities.html">Aktivitäten</a></li>
-                        <li><a href="about.html">Über uns</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="index.html" data-i18n="common.nav.home">Home</a></li>
+                        <li><a href="rooms.html" data-i18n="common.nav.rooms">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html" data-i18n="common.nav.restaurant">Restaurant</a></li>
+                        <li><a href="activities.html" data-i18n="common.nav.activities">Activities</a></li>
+                        <li><a href="about.html" data-i18n="common.nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Abonnieren Sie unseren Newsletter für exklusive Angebote und Updates.</p>
+                    <h3 data-i18n="common.footer.newsletter">Newsletter</h3>
+                    <p data-i18n="common.footer.newsletterText">Subscribe to our newsletter for exclusive offers and updates.</p>
                     <form id="newsletter-form" action="subscribe.php" method="post">
-                        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-                        <button type="submit" class="btn-secondary">Abonnieren</button>
+                        <input type="email" name="email" placeholder="Your email address" data-i18n="common.footer.emailPlaceholder" required>
+                        <button type="submit" class="btn-secondary" data-i18n="common.footer.subscribe">Subscribe</button>
                     </form>
                 </div>
                 <div class="footer-col">
-                    <h3>Folgen Sie uns</h3>
+                    <h3 data-i18n="common.footer.followUs">Follow Us</h3>
                     <div class="social-links">
                         <a href="https://facebook.com/kupferquelle" target="_blank" rel="noopener"><img src="images/facebook-icon.svg" alt="Facebook"></a>
                         <a href="https://instagram.com/kupferquelle" target="_blank" rel="noopener"><img src="images/instagram-icon.svg" alt="Instagram"></a>
@@ -210,11 +219,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Kupferquelle Hotel. Alle Rechte vorbehalten.</p>
+                <p data-i18n="common.footer.copyright">&copy; 2023 Kupferquelle Hotel. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="privacy.html">Datenschutz</a>
-                    <a href="terms.html">AGB</a>
-                    <a href="imprint.html">Impressum</a>
+                    <a href="privacy.html" data-i18n="common.footer.privacy">Privacy Policy</a>
+                    <a href="terms.html" data-i18n="common.footer.terms">Terms & Conditions</a>
+                    <a href="imprint.html" data-i18n="common.footer.imprint">Imprint</a>
                 </div>
             </div>
         </div>
